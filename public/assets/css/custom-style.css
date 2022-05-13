@@ -1,0 +1,10 @@
+.custom-header-logo-group {
+    align-items: center;
+}
+
+.custom-header-logo {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+    margin-right: 10px;
+}
