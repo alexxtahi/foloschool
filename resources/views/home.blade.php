@@ -15,25 +15,8 @@
     {{-- Hero --}}
     @include('includes.hero')
 
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3"
-                            placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Full Screen Search End -->
+    {{-- Search --}}
+    @include('includes.search')
 
 
     <!-- Facts Start -->
@@ -91,21 +74,25 @@
             <div class="row g-5">
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
-                        <h1 class="mb-0">The Best IT Solution With 10 Years of Experience</h1>
+                        <h5 class="fw-bold text-primary text-uppercase">A propos de nous</h5>
+                        <h1 class="mb-0">Alors, c'est quoi FOLO ?</h1>
                     </div>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit.
-                        Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem
-                        sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <p class="mb-4">
+                        FOLO est une solution qui permet aux parents d'accéder à distance 24H/24 et 7J/7 aux
+                        informations relatives à la scolarité de leurs enfants et met en relation les différents acteurs
+                        de l’établissement.
+                    </p>
                     <div class="row g-0 mb-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Award Winning</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Professional Staff
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Emploi du temps</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Gestion des notes
                             </h5>
                         </div>
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Support</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Fair Prices</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Gestion des absences
+                            </h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Informations
+                                centralisées</h5>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
@@ -114,17 +101,20 @@
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="mb-2">Call to ask any question</h5>
-                            <h4 class="text-primary mb-0">+012 345 6789</h4>
+                            <h5 class="mb-2">Contactez nous pour vos préoccupations</h5>
+                            <h4 class="text-primary mb-0">
+                                <a href="tel:+225 25 20 00 22 42">+225 25 20 00 22 42</a> /
+                                <a href="tel:+225 07 48 46 35 49">+225 07 48 46 35 49</a>
+                            </h4>
                         </div>
                     </div>
-                    <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request
-                        A Quote</a>
+                    <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">
+                        Laisser un message</a>
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
-                            src="{{ asset('template/img/about.jpg') }}" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100 rounded-3 wow zoomIn" data-wow-delay="0.9s"
+                            src="{{ asset('assets/img/wallpaper/1.jpg') }}" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -137,8 +127,8 @@
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Why Choose Us</h5>
-                <h1 class="mb-0">We Are Here to Grow Your Business Exponentially</h1>
+                <h5 class="fw-bold text-primary text-uppercase">Fonctionnalités</h5>
+                <h1 class="mb-0">Ce que nous apportons avec notre solution</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-4">
@@ -146,27 +136,29 @@
                         <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                                 style="width: 60px; height: 60px;">
-                                <i class="fa fa-cubes text-white"></i>
+                                <i class="fa fa-marker text-white"></i>
                             </div>
-                            <h4>Best In Industry</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam
-                                dolor</p>
+                            <h4>Gestion des notes</h4>
+                            <p class="mb-0">
+                                Consultation des notes, accès au relevé des notes et bulletin.
+                            </p>
                         </div>
                         <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                                 style="width: 60px; height: 60px;">
-                                <i class="fa fa-award text-white"></i>
+                                <i class="fa fa-calendar text-white"></i>
                             </div>
-                            <h4>Award Winning</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam
-                                dolor</p>
+                            <h4>Emploi du temps</h4>
+                            <p class="mb-0">
+                                Pour être informé à tout moment des cours, devoirs et examens.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s"
-                            src="{{ asset('template/img/feature.jpg') }}" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100 rounded-3 wow zoomIn" data-wow-delay="0.1s"
+                            src="{{ asset('assets/img/wallpaper/2.jpg') }}" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -174,20 +166,22 @@
                         <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                                 style="width: 60px; height: 60px;">
-                                <i class="fa fa-users-cog text-white"></i>
+                                <i class="fa fa-times-circle text-white"></i>
                             </div>
-                            <h4>Professional Staff</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam
-                                dolor</p>
+                            <h4>Gestion des absences</h4>
+                            <p class="mb-0">
+                                Suivi des abscences d'un élève, notification par email.
+                            </p>
                         </div>
                         <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                                 style="width: 60px; height: 60px;">
-                                <i class="fa fa-phone-alt text-white"></i>
+                                <i class="fa fa-info text-white"></i>
                             </div>
-                            <h4>24/7 Support</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam
-                                dolor</p>
+                            <h4>Informations centralisées</h4>
+                            <p class="mb-0">
+                                Accès à toutes les informations importantes sur l'école et l'élève.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -201,87 +195,107 @@
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
-                <h1 class="mb-0">Custom IT Solutions for Your Successful Business</h1>
+                <h5 class="fw-bold text-primary text-uppercase">Avantages</h5>
+                <h1 class="mb-0">Ce pourquoi vous devez l'adopter</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
                     <div
-                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        class="service-item bg-light rounded-3 d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="service-icon">
-                            <i class="fa fa-shield-alt text-white"></i>
+                            <i class="fa fa-school text-white"></i>
                         </div>
-                        <h4 class="mb-3">Cyber Security</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum
-                            dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
+                        <h4 class="mb-3">Ecoles</h4>
+                        <p class="m-0">
+                            Un point unique d'accès pour toutes informations, une qualité d’accueil améliorée
+                            et un partage d’information en temps réel.
+                        </p>
+                        <a class="btn btn-lg btn-primary rounded-3" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
                     <div
-                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        class="service-item bg-light rounded-3 d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="service-icon">
-                            <i class="fa fa-chart-pie text-white"></i>
+                            <i class="fa fa-child text-white"></i>
                         </div>
-                        <h4 class="mb-3">Data Analytics</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum
-                            dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
+                        <h4 class="mb-3">Parents</h4>
+                        <p class="m-0">
+                            Une solution permettant d'avoir une vision plus objective sur la vie scolaire en général, et
+                            un meilleur suivi de la scolarité des enfants.
+                        </p>
+                        <a class="btn btn-lg btn-primary rounded-3" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
                     <div
-                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        class="service-item bg-light rounded-3 d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="service-icon">
-                            <i class="fa fa-code text-white"></i>
+                            <i class="fa fa-book-reader text-white"></i>
                         </div>
-                        <h4 class="mb-3">Web Development</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum
-                            dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
+                        <h4 class="mb-3">Enseignant</h4>
+                        <p class="m-0">
+                            Interface pour consulter les emplois du temps, gérer les absences,
+                            enregistrer les résultats des élèves et le cahier de texte.
+                        </p>
+                        <a class="btn btn-lg btn-primary rounded-3" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
                     <div
-                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        class="service-item bg-light rounded-3 d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="service-icon">
-                            <i class="fab fa-android text-white"></i>
+                            <i class="fa fa-clock text-white"></i>
                         </div>
-                        <h4 class="mb-3">Apps Development</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum
-                            dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
+                        <h4 class="mb-3">Disponibilité</h4>
+                        <p class="m-0">
+                            Une solution disponible 24H/24 et 7J/7, accessible via ordinateurs, tablettes et
+                            smartphones.
+                        </p>
+                        <a class="btn btn-lg btn-primary rounded-3" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
                     <div
-                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        class="service-item bg-light rounded-3 d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="service-icon">
-                            <i class="fa fa-search text-white"></i>
+                            <i class="fa fa-percentage text-white"></i>
                         </div>
-                        <h4 class="mb-3">SEO Optimization</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum
-                            dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
+                        <h4 class="mb-3">Rentabilité</h4>
+                        <p class="m-0">
+                            Gestion d'école plus facile, Plus besoin d'impressions papier, Informations en temps réel et
+                            Confidentialité des données.
+                        </p>
+                        <a class="btn btn-lg btn-primary rounded-3" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
                     <div
-                        class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
-                        <h3 class="text-white mb-3">Call Us For Quote</h3>
-                        <p class="text-white mb-3">Clita ipsum magna kasd rebum at ipsum amet dolor justo dolor est
-                            magna stet eirmod</p>
-                        <h2 class="text-white mb-0">+012 345 6789</h2>
+                        class="position-relative bg-primary rounded-3 h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
+                        <h3 class="text-white mb-3">Contactez Nous</h3>
+                        <p class="text-white mb-3">
+                            Vous pouvez nous joindre pour toutes vos préoccupations.
+                        </p>
+                        <a href="tel:+225 07 48 46 35 49">
+                            <h3 class="text-white mb-0">
+                                +225 07 48 46 35 49
+                            </h3>
+                        </a>
+                        <a href="tel:+225 25 20 00 22 42">
+                            <h3 class="text-white mb-0">
+                                +225 25 20 00 22 42
+                            </h3>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -290,91 +304,8 @@
     <!-- Service End -->
 
 
-    <!-- Pricing Plan Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Pricing Plans</h5>
-                <h1 class="mb-0">We are Offering Competitive Prices for Our Clients</h1>
-            </div>
-            <div class="row g-0">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="bg-light rounded">
-                        <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Basic Plan</h4>
-                            <small class="text-uppercase">For Small Size Business</small>
-                        </div>
-                        <div class="p-5 pt-0">
-                            <h1 class="display-5 mb-3">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>49.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i
-                                    class="fa fa-times text-danger pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i
-                                    class="fa fa-times text-danger pt-1"></i></div>
-                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
-                        <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Standard Plan</h4>
-                            <small class="text-uppercase">For Medium Size Business</small>
-                        </div>
-                        <div class="p-5 pt-0">
-                            <h1 class="display-5 mb-3">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>99.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i
-                                    class="fa fa-times text-danger pt-1"></i></div>
-                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="bg-light rounded">
-                        <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Advanced Plan</h4>
-                            <small class="text-uppercase">For Large Size Business</small>
-                        </div>
-                        <div class="p-5 pt-0">
-                            <h1 class="display-5 mb-3">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>149.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h1>
-                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Pricing Plan End -->
-
+    {{-- Pricing --}}
+    {{-- @include('includes.pricing') --}}
 
     <!-- Quote Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -382,60 +313,70 @@
             <div class="row g-5">
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">Request A Quote</h5>
-                        <h1 class="mb-0">Need A Free Quote? Please Feel Free to Contact Us</h1>
+                        <h5 class="fw-bold text-primary text-uppercase">Faire une demande</h5>
+                        <h1 class="mb-0">Vous avez des préoccupations ? Nous serrons ravi d'y répondre !
+                        </h1>
                     </div>
                     <div class="row gx-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Reply within 24
-                                hours</h5>
+                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>
+                                Délai de réponse de moins de 24h</h5>
                         </div>
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>24 hrs
-                                telephone support</h5>
+                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>
+                                Assistance disponible 24h/24</h5>
                         </div>
                     </div>
-                    <p class="mb-4">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum.
-                        Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero
-                        eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit.
-                        Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                    <p class="mb-4">
+                        Vous pouvez aussi prendre rendez-vous et nous recontrer dans nos locaux à l'adresse suivante:
+                        2ème étage, Centre commercial Alpha Blondy, Cocody Riviera 2.
+                    </p>
                     <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
+                            <i class="fa fa-mail-bulk text-white"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="mb-2">Call to ask any question</h5>
-                            <h4 class="text-primary mb-0">+012 345 6789</h4>
+                            <h5 class="mb-2">Contactez nous pour vos préoccupations</h5>
+                            <h4 class="text-primary mb-0">
+                                <a href="mailto:contact@foloschool.com">contact@foloschool.com</a>
+                            </h4>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn"
                         data-wow-delay="0.9s">
-                        <form>
+                        <form action="{{ route('sendMessage') }}" method="POST">
+                            <meta name="csrf-token" content="{{ csrf_token() }}">
                             <div class="row g-3">
                                 <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name"
-                                        style="height: 55px;">
+                                    <input required id="customer_name" name="customer_name" type="text"
+                                        class="form-control bg-light border-0" placeholder="Votre nom"
+                                        value="Tonton Komenan" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email"
-                                        style="height: 55px;">
+                                    <input required id="customer_email" name="customer_email" type="email"
+                                        class="form-control bg-light border-0" placeholder="Votre adresse mail"
+                                        value="tontonkomenan@gmail.com" style="height: 55px;">
                                 </div>
-                                <div class="col-12">
+                                {{-- <div class="col-12">
                                     <select class="form-select bg-light border-0" style="height: 55px;">
                                         <option selected>Select A Service</option>
                                         <option value="1">Service 1</option>
                                         <option value="2">Service 2</option>
                                         <option value="3">Service 3</option>
                                     </select>
+                                </div> --}}
+                                <div class="col-12">
+                                    <textarea required id="customer_message" name="customer_message" class="form-control bg-light border-0" rows="3"
+                                        placeholder="Message" value="Je suis content"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Request A Quote</button>
+                                    <button type="button" id="send-btn" onclick="sendMessage()"
+                                        class="btn btn-dark w-100 py-3">
+                                        Laisser un message
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -799,18 +740,9 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+    {{-- Scripts --}}
+    @include('includes.js')
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('template/lib/wow/wow.min.js') }}"></script>
-    <script src="{{ asset('template/lib/easing/easing.min.js') }}"></script>
-    <script src="{{ asset('template/lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('template/lib/counterup/counterup.min.js') }}"></script>
-    <script src="{{ asset('template/lib/owlcarousel/owl.carousel.min.js') }}"></script>
-
-    <!-- Template Javascript -->
-    <script src="{{ asset('template/js/main.js') }}"></script>
 </body>
 
 </html>

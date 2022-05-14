@@ -8,3 +8,7 @@
     object-fit: contain;
     margin-right: 10px;
 }
+
+.email-footer {
+    margin-top: 24px;
+}
