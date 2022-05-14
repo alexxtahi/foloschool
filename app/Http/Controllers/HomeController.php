@@ -15,7 +15,7 @@ class HomeController extends Controller
         // dd($request->all());
         $data = $request->all();
         try {
-            Mail::to('contact@foloschool.com')->send(new FoloSupportTeam($data['customer_name'], $data['customer_email'], $data['customer_message']));
+            Mail::to('contact@foloschool.com')->send(new FoloSupportTeam($data['customer_name'], $data['customer_email'], $data['customer_subject'], $data['customer_message']));
             return response()->json([
                 'success' => true,
                 'message' => 'Votre message a bien été envoyé',

@@ -14,6 +14,7 @@ function sendMessage() {
         data: {
             'customer_name': $('#customer_name').val(),
             'customer_email': $('#customer_email').val(),
+            'customer_subject': $('#customer_subject').val(),
             'customer_message': $('#customer_message').val(),
         },
         success: function (response) {
@@ -22,7 +23,7 @@ function sendMessage() {
         },
         error: function (response) {
             $('#send-btn').prop('disabled', false);
-            $('#send-btn').html('Echec, Réessayer');
+            $('#send-btn').html('Echec, Réessayez');
         },
     });
 }

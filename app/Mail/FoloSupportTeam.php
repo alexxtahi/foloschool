@@ -13,6 +13,7 @@ class FoloSupportTeam extends Mailable
 
     private $customer_name;
     private $customer_email;
+    private $customer_subject;
     private $customer_message;
 
     /**
@@ -20,10 +21,11 @@ class FoloSupportTeam extends Mailable
      *
      * @return void
      */
-    public function __construct($customer_name, $customer_email, $customer_message)
+    public function __construct($customer_name, $customer_email, $customer_subject, $customer_message)
     {
         $this->customer_name = $customer_name;
         $this->customer_email = $customer_email;
+        $this->customer_subject = $customer_subject;
         $this->customer_message = $customer_message;
     }
 
@@ -38,6 +40,7 @@ class FoloSupportTeam extends Mailable
         $this->view('emails.customer-message')->with([
             'customer_name' => $this->customer_name,
             'customer_email' => $this->customer_email,
+            'customer_subject' => $this->customer_subject,
             'customer_message' => $this->customer_message,
         ]);
         // Build the message

@@ -14,9 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-
+// Accueil
+Route::view('/', 'home')->name('home');
 // Envoyer un message à l'assistance
 Route::post('/send-message', [HomeController::class, 'sendMessage'])->name('sendMessage');
+// A propos
+Route::view('/about', 'about')->name('about');
+// Avantages
+Route::view('/avantages', 'avantages')->name('avantages');
+// Contact
+Route::view('/contact', 'contact')->name('contact');

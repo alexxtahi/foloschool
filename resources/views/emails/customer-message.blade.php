@@ -17,6 +17,7 @@
     <div class="email-content">
         <p><strong>De:</strong> {{ $customer_name }}</p>
         <p><strong>Email:</strong> {{ $customer_email }}</p>
+        <p><strong>Sujet:</strong> {{ $customer_subject }}</p>
         <p><strong>Message:</strong><br>{{ $customer_message }}</p>
     </div>
     <div class="email-footer">

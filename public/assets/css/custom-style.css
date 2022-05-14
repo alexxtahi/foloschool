@@ -9,6 +9,26 @@
     margin-right: 10px;
 }
 
+.custom-footer-logo {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
 .email-footer {
     margin-top: 24px;
+}
+
+.custom-team-member-pic {
+    object-fit: cover;
+    object-position: center;
+    height: 350px;
+}
+
+.custom-blog-preview-pic {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 250px;
 }
