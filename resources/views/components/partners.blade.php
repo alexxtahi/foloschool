@@ -5,7 +5,7 @@
             <div class="owl-carousel vendor-carousel">
                 <img src="{{ asset('assets/img/partners/rti-info.svg') }}" alt="Logo RTI Info">
                 <img src="{{ asset('assets/img/partners/life-tv.png') }}" alt="Logo Life TV">
-                <img src="{{ asset('assets/img/partners/wave.png') }}" alt="Logo Wave">
+                {{-- <img src="{{ asset('assets/img/partners/wave.png') }}" alt="Logo Wave"> --}}
             </div>
         </div>
     </div>

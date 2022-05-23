@@ -45,7 +45,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
         <a href="{{ route('home') }}" class="navbar-brand p-0 d-flex flex-row custom-header-logo-group">
             <img class="custom-header-logo" src="{{ asset('assets/img/simple-icon-folo.png') }}" alt="Logo FOLO" />
-            <h1 class="m-0"> FOLO Zaza</h1>
+            <h1 class="m-0"> FOLO School</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>
