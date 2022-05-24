@@ -4,9 +4,9 @@
         <div class="row g-5">
             <div class="col-lg-7">
                 <div class="section-title position-relative pb-3 mb-5">
-                    <h5 class="fw-bold text-primary text-uppercase">Faire une demande</h5>
+                    <h5 class="fw-bold text-primary text-uppercase">Laissez nous un message</h5>
                     <h1 class="mb-0">
-                        Vous avez des préoccupations ? Nous serrons ravi d'y répondre !
+                        Avez-vous des questions ?
                     </h1>
                 </div>
                 <div class="row gx-3">
@@ -20,8 +20,7 @@
                     </div>
                 </div>
                 <p class="mb-4">
-                    Vous pouvez aussi prendre rendez-vous et nous recontrer dans nos locaux à l'adresse suivante:
-                    2ème étage, Centre commercial Alpha Blondy, Cocody Riviera 2.
+                    Laissez nous un message et nous vous répondrons dans les meilleurs délais.
                 </p>
                 <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
                     <div class="bg-primary d-flex align-items-center justify-content-center rounded"
@@ -29,9 +28,22 @@
                         <i class="fa fa-mail-bulk text-white"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-2">Contactez nous pour vos préoccupations</h5>
+                        <h5 class="mb-2">Email</h5>
                         <h4 class="text-primary mb-0">
                             <a href="mailto:contact@foloschool.com">contact@foloschool.com</a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+                        style="width: 60px; height: 60px;">
+                        <i class="fa fa-phone text-white"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Téléphone</h5>
+                        <h4 class="text-primary mb-0">
+                            <a href="tel:+225 25 20 00 22 42">+225 25 20 00 22 42</a> /
+                            <a href="tel:+225 07 48 46 35 49">+225 07 48 46 35 49</a>
                         </h4>
                     </div>
                 </div>

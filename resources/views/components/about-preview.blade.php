@@ -4,8 +4,8 @@
         <div class="row g-5">
             <div class="col-lg-7">
                 <div class="section-title position-relative pb-3 mb-5">
-                    <h5 class="fw-bold text-primary text-uppercase">A propos de nous</h5>
-                    <h1 class="mb-0">Alors, c'est quoi FOLO ?</h1>
+                    <h5 class="fw-bold text-primary text-uppercase">Notre solution</h5>
+                    <h1 class="mb-0">C'est quoi FOLO ?</h1>
                 </div>
                 <p class="mb-4">
                     FOLO est une solution qui permet aux parents d'accéder à distance 24H/24 et 7J/7 aux
@@ -31,9 +31,10 @@
                         <i class="fa fa-phone-alt text-white"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-2">Contactez nous pour vos préoccupations</h5>
+                        <h5 class="mb-2">Contactez-nous</h5>
                         <h4 class="text-primary mb-0">
-                            <a href="tel:+225 25 20 00 22 42">+225 25 20 00 22 42</a> /
+                            <a href="tel:+225 25 20 00 22 42">+225 25 20 00 22 42</a>
+                            <br>
                             <a href="tel:+225 07 48 46 35 49">+225 07 48 46 35 49</a>
                         </h4>
                     </div>
@@ -44,7 +45,7 @@
             <div class="col-lg-5" style="min-height: 500px;">
                 <div class="position-relative h-100">
                     <img class="position-absolute w-100 h-100 rounded-3 wow zoomIn" data-wow-delay="0.9s"
-                        src="{{ asset('assets/img/wallpaper/1.jpg') }}" style="object-fit: cover;">
+                        src="{{ asset('assets/img/wallpaper/9.jpg') }}" style="object-fit: cover;">
                 </div>
             </div>
         </div>

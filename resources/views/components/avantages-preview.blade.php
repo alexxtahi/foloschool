@@ -3,7 +3,7 @@
     <div class="container py-5">
         <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
             <h5 class="fw-bold text-primary text-uppercase">Avantages</h5>
-            <h1 class="mb-0">Ce pourquoi vous devez l'adopter</h1>
+            <h1 class="mb-0">Pourquoi utiliser FOLO ?</h1>
         </div>
         <div class="row g-5">
             <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
@@ -14,8 +14,8 @@
                     </div>
                     <h4 class="mb-3">Ecoles</h4>
                     <p class="m-0">
-                        Un point unique d'accès pour toutes informations, une qualité d’accueil améliorée
-                        et un partage d’information en temps réel.
+                        Un point unique d'accès pour toutes informations, partage d’information en temps réel et
+                        conservation de vos données pendant des années
                     </p>
                     {{-- <a class="btn btn-lg btn-primary rounded-3" href="">
                             <i class="bi bi-arrow-right"></i>
@@ -44,7 +44,7 @@
                     <div class="service-icon">
                         <i class="fa fa-book-reader text-white"></i>
                     </div>
-                    <h4 class="mb-3">Enseignant</h4>
+                    <h4 class="mb-3">Enseignants</h4>
                     <p class="m-0">
                         Interface pour consulter les emplois du temps, gérer les absences,
                         enregistrer les résultats des élèves et le cahier de texte.
@@ -76,10 +76,9 @@
                     <div class="service-icon">
                         <i class="fa fa-percentage text-white"></i>
                     </div>
-                    <h4 class="mb-3">Rentabilité</h4>
+                    <h4 class="mb-3">Communication</h4>
                     <p class="m-0">
-                        Gestion d'école plus facile, Plus besoin d'impressions papier, Informations en temps réel et
-                        Confidentialité des données.
+                        Messagerie interne, protection des données et disponibilité avec ou sans connexion internet.
                     </p>
                     {{-- <a class="btn btn-lg btn-primary rounded-3" href="">
                             <i class="bi bi-arrow-right"></i>
@@ -89,9 +88,9 @@
             <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
                 <div
                     class="position-relative bg-primary rounded-3 h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
-                    <h3 class="text-white mb-3">Contactez Nous</h3>
+                    <h3 class="text-white mb-3">Contactez-Nous</h3>
                     <p class="text-white mb-3">
-                        Vous pouvez nous joindre pour toutes vos préoccupations.
+                        Réjoignez notre réseau d'écoles partenaires.
                     </p>
                     <a href="tel:+225 07 48 46 35 49">
                         <h3 class="text-white mb-0">

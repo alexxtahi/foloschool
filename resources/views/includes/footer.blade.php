@@ -8,10 +8,10 @@
                     <a href="{{ route('home') }}" class="navbar-brand custom-header-logo-group">
                         <img class="custom-footer-logo" src="{{ asset('assets/img/simple-icon-folo.png') }}"
                             alt="Logo FOLO" />
-                        <h1 class="m-0 text-white"> FOLO School</h1>
+                        <h1 class="m-0 text-white"> FOLO</h1>
                     </a>
                     <p class="mt-3 mb-4">
-                        La plateforme digitale de gestion de scolaire disponible 24h/24 et 7jours/7.
+                        La solution pour un meilleur suivi scolaire.
                     </p>
                     {{-- <form action="">
                         <div class="input-group">

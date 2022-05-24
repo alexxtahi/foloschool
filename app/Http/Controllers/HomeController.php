@@ -12,7 +12,6 @@ class HomeController extends Controller
     // Envoyer un message à l'assistance
     public function sendMessage(Request $request)
     {
-        // dd($request->all());
         $data = $request->all();
         try {
             Mail::to('contact@foloschool.com')->send(new FoloSupportTeam($data['customer_name'], $data['customer_email'], $data['customer_subject'], $data['customer_message']));

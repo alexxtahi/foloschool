@@ -3,7 +3,7 @@
     <div class="container py-5">
         <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
             <h5 class="fw-bold text-primary text-uppercase">Quelques mots</h5>
-            <h1 class="mb-0">Ce que les gens disent sur FOLO</h1>
+            <h1 class="mb-0">Avis de nos utilisateurs</h1>
         </div>
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
             <div class="testimonial-item bg-light my-4">
