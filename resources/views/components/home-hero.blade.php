@@ -1,7 +1,7 @@
 <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
         @php
-            $pictures = ['assets/img/wallpaper/' . rand(1, 6) . '.jpg', 'assets/img/wallpaper/' . rand(1, 6) . '.jpg'];
+            $pictures = ['assets/img/wallpaper/' . rand(1, 9) . '.jpg', 'assets/img/wallpaper/' . rand(1, 9) . '.jpg'];
         @endphp
         <div class="carousel-item active">
             <img class="w-100" src="{{ asset($pictures[0]) }}" alt="Image">
