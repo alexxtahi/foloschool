@@ -3,6 +3,8 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
+require __DIR__ . '/groutes.php';
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
