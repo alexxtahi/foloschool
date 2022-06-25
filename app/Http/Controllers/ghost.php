@@ -94,6 +94,8 @@ class ghost extends Controller
     public function events()
     {
         return response()->json([
+            "type" => "url_verification",
+            "token" => "",
             "challenge" => 'ok',
         ]);
     }
