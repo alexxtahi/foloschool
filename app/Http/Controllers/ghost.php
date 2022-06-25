@@ -93,6 +93,8 @@ class ghost extends Controller
     // Handle all events in the slack workspace
     public function events()
     {
-        return "challenge";
+        return response()->json([
+            "challenge" => 'ok',
+        ]);
     }
 }
