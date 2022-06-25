@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ghost;
+use App\Http\Controllers\ghost\ghost;
 
 // ghost
 Route::group(['prefix' => 'ghost'], function () {
