@@ -89,4 +89,10 @@ class ghost extends Controller
             return $responseBody;
         }
     }
+
+    // Handle all events in the slack workspace
+    public function events()
+    {
+        return "challenge";
+    }
 }
