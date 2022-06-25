@@ -10,12 +10,19 @@ use Illuminate\Support\Facades\Http;
 
 class ghost extends Controller
 {
-    // public bool $isOnline = true;
-    private string $botToken = 'Bearer xoxb-3725987236561-3717503003300-8pGSVbWJacnGdOjYpBgTN0E4';
-    private array $endPoints = [
-        'channels' => 'https://slack.com/api/conversations.list',
-        'sendMessage' => 'https://slack.com/api/chat.postMessage',
-    ];
+    private $isOnline;
+    private $botToken;
+    private $endPoints;
+
+    public function __construct()
+    {
+        $this->isOnline = true;
+        $this->botToken = 'Bearer xoxb-3725987236561-3717503003300-8pGSVbWJacnGdOjYpBgTN0E4';
+        $this->endPoints = [
+            'channels' => 'https://slack.com/api/conversations.list',
+            'sendMessage' => 'https://slack.com/api/chat.postMessage',
+        ];
+    }
 
     // Testing bot
     public function test()
@@ -31,58 +38,55 @@ class ghost extends Controller
                     break;
                 }
             }
-            // dd($botChannelId);
             // send log message
-            $message = $this->sendMessage($botChannelId, "Je suis opérationnel !");
-            return $message;
+            return "Je suis opérationnel !";
         } else {
             return "Désolé, il y'a un petit soucis technique. Je n'ai pas pu récupérer les canaux de discussion.";
         }
-        return $channels;
     }
 
     // Get conversations list
     public function getChannels()
     {
-        // if ($this->isOnline) {
-        $headers = [
-            'Authorization' => $this->botToken,
-        ];
-        // sending request...
-        $response = Http::withHeaders($headers)->post($this->endPoints['channels']);
-        // get results
-        $statusCode = $response->status();
-        $responseBody = json_decode($response->getBody(), true);
-        $responseBody['called_function'] = 'getChannels';
+        if ($this->isOnline) {
+            $headers = [
+                'Authorization' => $this->botToken,
+            ];
+            // sending request...
+            $response = Http::withHeaders($headers)->post($this->endPoints['channels']);
+            // get results
+            $statusCode = $response->status();
+            $responseBody = json_decode($response->getBody(), true);
+            $responseBody['called_function'] = 'getChannels';
 
-        // visualize response
-        return $responseBody;
-        // }
+            // visualize response
+            return $responseBody;
+        }
     }
 
     // Send message ton a channel
 
     public function sendMessage(string $channelId = null, string $msg = "Oups ! J'ai envoyé un message par erreur")
     {
-        // if ($this->isOnline) {
-        $headers = [
-            'Content-type' => 'application/json',
-            'Authorization' => $this->botToken,
-        ];
+        if ($this->isOnline) {
+            $headers = [
+                'Content-type' => 'application/json',
+                'Authorization' => $this->botToken,
+            ];
 
-        $body = [
-            // select by default [bot] channel if channelId isn't given
-            'channel' => $channelId ?? $this->getChannels()['channels'][0]['id'],
-            'text' => $msg,
-        ];
+            $body = [
+                // select by default [bot] channel if channelId isn't given
+                'channel' => $channelId ?? $this->getChannels()['channels'][0]['id'],
+                'text' => $msg,
+            ];
 
-        $response = Http::withHeaders($headers)->post($this->endPoints['sendMessage'], $body);
+            $response = Http::withHeaders($headers)->post($this->endPoints['sendMessage'], $body);
 
-        $statusCode = $response->status();
-        $responseBody = json_decode($response->getBody(), true);
-        $responseBody['called_function'] = 'sendMessage';
+            $statusCode = $response->status();
+            $responseBody = json_decode($response->getBody(), true);
+            $responseBody['called_function'] = 'sendMessage';
 
-        return $responseBody;
-        // }
+            return $responseBody;
+        }
     }
 }
