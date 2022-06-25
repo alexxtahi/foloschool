@@ -95,8 +95,8 @@ class ghost extends Controller
     {
         return response()->json([
             "type" => "url_verification",
-            "token" => "",
-            "challenge" => 'ok',
+            "token" => csrf_token(),
+            "challenge" => csrf_token(),
         ]);
     }
 }
