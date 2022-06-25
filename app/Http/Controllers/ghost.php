@@ -91,12 +91,10 @@ class ghost extends Controller
     }
 
     // Handle all events in the slack workspace
-    public function events()
+    public function events(Request $request)
     {
         return response()->json([
-            "type" => "url_verification",
-            "token" => csrf_token(),
-            "challenge" => csrf_token(),
+            "challenge" => $request->challenge,
         ]);
     }
 }
