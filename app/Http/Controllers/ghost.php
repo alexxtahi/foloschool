@@ -66,7 +66,7 @@ class ghost extends Controller
 
     // Send message ton a channel
 
-    public function sendMessage(string $channelId = null, string $msg = "Oups ! J'ai envoyé un message par erreur")
+    public function sendMessage(string $channelId = null, $msg = "Oups ! J'ai envoyé un message par erreur")
     {
         if ($this->isOnline) {
             $headers = [
@@ -93,6 +93,8 @@ class ghost extends Controller
     // Handle all events in the slack workspace
     public function events(Request $request)
     {
+        $this->sendMessage(null, $request->all());
+        // events challenge response
         return response()->json([
             "challenge" => $request->challenge,
         ]);
